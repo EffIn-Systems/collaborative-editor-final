@@ -84,13 +84,19 @@ export default function Editor({ currentUser }) {
     <div style={{ 
       display: 'flex', 
       flexDirection: 'column', 
-      height: '100%',
-      width: '100%',
+      height: '100vh',  // Changed from 100%
+      width: '100vw',   // Changed from 100%
       background: '#fff',
       borderRadius: '12px',
       overflow: 'hidden',
       border: '2px solid #0E0146',
-      boxShadow: '0 4px 12px rgba(14, 1, 70, 0.1)'
+      boxShadow: '0 4px 12px rgba(14, 1, 70, 0.1)',
+      boxSizing: 'border-box',  // Add this!
+      position: 'fixed',  // Add this!
+      top: 0,  // Add this!
+      left: 0,  // Add this!
+      right: 0,  // Add this!
+      bottom: 0,  // Add this!
     }}>
       {/* Header Bar */}
       <div style={{

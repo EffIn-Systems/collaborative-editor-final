@@ -99,30 +99,36 @@ export default function Editor({ currentUser }) {
       bottom: 0,  // Add this!
     }}>
       {/* Header Bar */}
-      <div style={{
-        background: 'linear-gradient(135deg, #0E0146 0%, #1a0a5e 100%)',
-        padding: '12px 20px',
-        color: '#fff',
-        fontSize: '14px',
-        fontWeight: '600',
-        letterSpacing: '0.5px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px'
-      }}>
-        <span style={{ 
-          width: '8px', 
-          height: '8px', 
-          background: '#5371F7',
-          borderRadius: '50%',
-          display: 'inline-block',
-          animation: 'pulse 2s infinite'
-        }}></span>
-        Collaborative Editor
-        <span style={{ marginLeft: 'auto', fontSize: '12px' }}>
-          👤 {currentUser?.name || 'Anonymous'}
-        </span>
-      </div>
+<div style={{
+  background: 'linear-gradient(135deg, #0E0146 0%, #1a0a5e 100%)',
+  padding: '10px 16px',  // Changed from '12px 20px' to match chat
+  color: '#fff',
+  fontSize: '14px',      // Keep same
+  fontWeight: '500',     // Changed from '600' to match chat
+  letterSpacing: '0px',  // Changed from '0.5px' to match chat
+  fontFamily: 'inherit', // Use default system fonts like chat
+  display: 'flex',
+  alignItems: 'center',
+  gap: '8px'
+}}>
+  <span style={{ 
+    width: '8px',        // Already correct
+    height: '8px', 
+    background: '#5371F7',
+    borderRadius: '50%',
+    display: 'inline-block',
+    animation: 'pulse 2s infinite'
+  }}></span>
+  Collaborative Editor
+  <span style={{ 
+    marginLeft: 'auto', 
+    fontSize: '12px',     // Keep smaller for user name
+    fontWeight: '400',    // Lighter for user name
+    fontFamily: 'inherit' // Use system fonts
+  }}>
+    👤 {currentUser?.name || 'Anonymous'}
+  </span>
+</div>
       
       {/* Toolbar */}
       <div style={{ 

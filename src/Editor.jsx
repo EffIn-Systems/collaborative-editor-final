@@ -99,18 +99,21 @@ export default function Editor({ currentUser }) {
       bottom: 0,  // Add this!
     }}>
       {/* Header Bar */}
-<div style={{
+      <div style={{
   background: 'linear-gradient(135deg, #0E0146 0%, #1a0a5e 100%)',
-  padding: '10px 16px',  // Changed from '12px 20px' to match chat
+  padding: '10px 16px',
+  fontSize: '14px',
+  lineHeight: '1.4',
+  fontWeight: 500,
+  letterSpacing: '0px',
+  fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
   color: '#fff',
-  fontSize: '14px',      // Keep same
-  fontWeight: '500',     // Changed from '600' to match chat
-  letterSpacing: '0px',  // Changed from '0.5px' to match chat
-  fontFamily: 'inherit', // Use default system fonts like chat
   display: 'flex',
   alignItems: 'center',
   gap: '8px'
 }}>
+
+
   <span style={{ 
     width: '8px',        // Already correct
     height: '8px', 
@@ -124,7 +127,7 @@ export default function Editor({ currentUser }) {
     marginLeft: 'auto', 
     fontSize: '12px',     // Keep smaller for user name
     fontWeight: '400',    // Lighter for user name
-    fontFamily: 'inherit' // Use system fonts
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
   }}>
     👤 {currentUser?.name || 'Anonymous'}
   </span>
